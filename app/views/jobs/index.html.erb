@@ -1,0 +1,10 @@
+<h1>RailsBridgeCorp Open Jobs</h1>
+
+<div>
+  <ul>
+    <% @jobs.each do |j| %>
+      <h3><%= j.title %></h3>
+      <p><%= j.description %></p>
+    <% end %>
+  </ul>
+</div>
