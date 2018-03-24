@@ -2,9 +2,11 @@
 
 <div>
   <ul>
-    <% @jobs.each do |j| %>
-      <h3><%= j.title %></h3>
-      <p><%= j.description %></p>
+    <% @jobs.each do |job| %>
+      <h3><%= job.title %> <%= link_to "[View]", job_path(job) %></h3>
+      <p><%= job.description %></p>
+      <h5><%= link_to "Edit Posting", edit_job_path(job) %></h5>
+      <h5><%= link_to "Delete Posting", job, method: :delete %></h5>
     <% end %>
   </ul>
 </div>
